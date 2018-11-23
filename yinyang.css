@@ -19,11 +19,11 @@ body {
     will-change     : transform;
 }
 
-/* #Layer_1_1_ > * {
+/* #Layer_1 > * {
     pointer-events: none;
 }
 
-#Layer_1_1_:hover > * {
+#Layer_1:hover > * {
     animation-play-state: paused;
 } */
 
