@@ -6,20 +6,26 @@ body {
 }
 
 .whiteLeft, .whiteRight {
-    fill   : white;
-    z-index: 2;
+    fill: white;
 }
 
 .blackLeft, .blackRight {
-    fill   : black;
-    z-index: 0;
+    fill: black;
 }
 
 .rotate {
     transform-origin: center center;
-    animation       : rotate 5s 10ms ease-in-out infinite;
+    animation       : rotate 10s ease-in-out infinite;
     will-change     : transform;
 }
+
+/* #Layer_1_1_ > * {
+    pointer-events: none;
+}
+
+#Layer_1_1_:hover > * {
+    animation-play-state: paused;
+} */
 
 /* The animation code */
 @keyframes rotate {
