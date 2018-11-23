@@ -7,7 +7,7 @@
     // webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend
 
     var count = 0;
-    var halfTime = 5000;
+    var halfTime = 2500;
     var yinyang = document.getElementById('Layer_1');
     var whiteLeft = document.getElementsByClassName('whiteLeft')[0];
     var whiteRight = document.getElementsByClassName('whiteRight')[0];

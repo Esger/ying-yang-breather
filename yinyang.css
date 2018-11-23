@@ -15,7 +15,7 @@ body {
 
 .rotate {
     transform-origin: center center;
-    animation       : rotate 10s ease-in-out infinite;
+    animation       : rotate 5s ease-in-out infinite;
     will-change     : transform;
 }
 
