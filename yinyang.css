@@ -6,25 +6,28 @@ body {
 }
 
 .whiteLeft, .whiteRight {
-    fill: white;
+    fill   : white;
+    z-index: 2;
 }
 
 .blackLeft, .blackRight {
-    fill: black;
+    fill   : black;
+    z-index: 0;
 }
 
 .rotate {
     transform-origin: center center;
-    transform       : rotate(0deg);
-    transition      : transform 5s ease-in-out;
+    animation       : rotate 5s 10ms ease-in-out infinite;
     will-change     : transform;
 }
 
-.rotate.rotated {
-    transform: rotate(360deg);
-}
+/* The animation code */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
 
-.reset {
-    transition: none !important;
-    transform : rotate(0deg) !important;
+    to {
+        transform: rotate(360deg);
+    }
 }

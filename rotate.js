@@ -1,46 +1,25 @@
 (function () {
-    var yinyang = document.getElementsByClassName('rotate');
-
-    function startRotation() {
-        yinyang[0].classList.toggle('rotated');
-        yinyang[1].classList.toggle('rotated');
-        console.log('start rotation', yinyang[0].classList);
-    }
-
-    function reset() {
-        yinyang[0].classList.toggle('reset');
-        yinyang[1].classList.toggle('reset');
-        console.log('reset', yinyang[0].classList);
-    }
-
-    function restore() {
-        yinyang[0].classList.toggle('rotated');
-        yinyang[1].classList.toggle('rotated');
-        console.log('restore', yinyang[0].classList);
-        reset();
-    }
-
     /* Listen for a transition! */
     // var transitionEvent = whichTransitionEvent();
 
     // transitionEvent && yinyang[0].addEventListener(transitionEvent, OnTransitionEnd);
     // console.log(transitionEvent);
-    // webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd
+    // webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend
 
-    yinyang[1].addEventListener("transitionend", function (e) {
-        console.log(e.propertyName);
-        reset();
-        restore();
-        setTimeout(function () {
-            startRotation();
-        });
-    });
+    var count = 0;
+    var yinyang = document.getElementById('Layer_1_1_');
+
+    document.addEventListener("animationiteration", function () {
+        count++;
+        if (count % 2 == 0) {
+            console.log('yo', count);
+            var whiteRight = document.querySelectorAll('whiteRight');
+            var blackRight = document.querySelectorAll('blackRight');
+            yinyang.insertBefore(yinyang.removeChild(whiteRight), blackRight);
+        }
+    }, true);
 
     // animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd
-    setTimeout(function () {
-        startRotation();
-    });
-    // startRotation();
 
     /* From Modernizr */
     function whichTransitionEvent() {
