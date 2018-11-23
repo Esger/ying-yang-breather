@@ -1,0 +1,39 @@
+body {
+    background-color: goldenrod;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+.whiteLeft, .whiteRight {
+    fill: white;
+}
+
+.blackLeft, .blackRight {
+    fill: black;
+}
+
+.rotate {
+    transform-origin: center center;
+    animation       : rotate 5s ease-in-out infinite;
+    will-change     : transform;
+}
+
+/* #Layer_1 > * {
+    pointer-events: none;
+}
+
+#Layer_1:hover > * {
+    animation-play-state: paused;
+} */
+
+/* The animation code */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
