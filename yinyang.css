@@ -14,18 +14,13 @@ body {
 }
 
 .rotate {
-    transform-origin: center center;
-    animation       : rotate 5s ease-in-out infinite;
-    will-change     : transform;
+    transform-origin           : center center;
+    animation                  : rotate 5s ease-in-out infinite;
+    -webkit-transform          : translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective        : 1000;
+    will-change                : transform;
 }
-
-/* #Layer_1 > * {
-    pointer-events: none;
-}
-
-#Layer_1:hover > * {
-    animation-play-state: paused;
-} */
 
 /* The animation code */
 @keyframes rotate {
